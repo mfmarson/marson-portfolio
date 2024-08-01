@@ -28,25 +28,33 @@
             color: #ddd; 
         }
       
-    .row {
-        display: flex;
-        flex-wrap: wrap;
+    .bg-light {
+        background-color: #f8f9fa !important;
     }
-
-    .col-lg-4 {
-        display: flex;
-        flex-direction: column;
-    }
-
     .card {
-        flex: 1;
+        border-radius: 10px;
     }
+    .card-body {
+        padding: 2rem;
+    }
+    .text-uppercase {
+        letter-spacing: 1px;
+    }
+    .shadow-lg {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    }
+    .rounded-3 {
+        border-radius: .75rem !important;
+    }
+    .fw-bolder {
+        font-weight: bolder !important;
+    }
+    .list-unstyled li {
+        margin-bottom: 0.5rem;
+    }
+</style>
 
-
-       
-    </style>
     </head>
-</head>
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
        
@@ -67,28 +75,26 @@
                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Skills</a></li>
                     </ul>
                     
                 </div>
             </div>
         </nav>
 
-    <section class="row gx-5 justify-content-center py-5">
-    <div class="container px-5 my-5">
+
+   <div class="bg-light py-5">
+    <section class="container">
         <div class="text-center mb-5">
-            <h1 class="fw-bolder ">Resume</h1>
-           <a class="btn btn-info bg-gradient btn-lg px-4" href="https://docs.google.com/document/d/e/2PACX-1vQ2wVbidBKdp3JFZDC4lgkq2F6pCnXFDRRvMCObe7S0dr-o0kV46mntzku-ltgIISuaI4jszorDaplb/pub">View Here</a>
-        </div>
-        <div class="text-center mb-5 ">
-            <h1 class="fw-bolder ">Skills</h1>
+            <h1 class="fw-bolder">Skills</h1>
         </div>
         <div class="row gx-5 justify-content-center">
-            <div class="col-lg-4 mb-5">
-                <div class="card mb-5 mb-xl-3 shadow border-0 p-3 shadow-lg bg-white rounded">
-                    <div class="card-body">
-                        <div class="medium text-uppercase fw-bold pb-xl-4 text-decoration-underline">Soft Skills</div>
-                        <ul class="two-column-list">
+            <!-- Box 1: Soft Skills -->
+            <div class="col-lg-5 mb-5 ">
+                <div class="card h-100 rounded-3 shadow border-0 p-3 bg-white rounded">
+                    <div class="card-body ">
+                        <div class="medium text-uppercase fw-bold pb-3 text-decoration-underline">Soft Skills</div>
+                        <ul class="list-unstyled">
                             <li>Self-starter</li>
                             <li>People-centric</li>
                             <li>Team collaboration</li>
@@ -101,11 +107,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-5">
-                <div class="card mb-5 mb-xl-3 shadow border-0 p-3 shadow-lg bg-white rounded">
+            <!-- Box 2: Programming Skills -->
+            <div class="col-lg-5 mb-5">
+                <div class="card h-100 rounded-3 shadow border-0 p-3 bg-white rounded">
                     <div class="card-body">
-                        <div class="medium text-uppercase fw-bold pb-xl-4 text-decoration-underline">Technical Skills</div>
-                        <ul class="two-column-list">
+                        <div class="medium text-uppercase fw-bold pb-3 text-decoration-underline">Programming Skills</div>
+                        <ul class="list-unstyled">
                             <li>JavaScript</li>
                             <li>Python</li>
                             <li>React</li>
@@ -113,19 +120,50 @@
                             <li>CSS</li>
                             <li>SQL</li>
                             <li>RestfulAPI</li>
-                            <li>Microsoft Office Suite</li>
-                            <li>PowerBi</li>
-                            <li>Electronic Medical Records</li>
-                            <li>Medical Applications</li>
+                            <li>Git</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="row gx-5 justify-content-center">
+            <!-- Box 3: Administrative Skills -->
+            <div class="col-lg-5 mb-5">
+                <div class="card h-100 rounded-3 shadow border-0 p-3 bg-white rounded">
+                    <div class="card-body">
+                        <div class="medium text-uppercase fw-bold pb-3 text-decoration-underline">Administrative Skills</div>
+                        <ul class="list-unstyled">
+                            <li>Microsoft Office Suite</li>
+                            <li>Teams</li>
+                            <li>Agile Methodologies</li>
+                            <li>Google Workspace</li>
+                            <li>Project Management Software: Monday, Jira, Asana, Trello, SmartSheet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4: Medical Skills -->
+            <div class="col-lg-5 mb-5">
+                <div class="card h-100 rounded-3 shadow border-0 p-3 bg-white rounded">
+                    <div class="card-body">
+                        <div class="medium text-uppercase fw-bold pb-3 text-decoration-underline">Medical Skills</div>
+                        <ul class="list-unstyled">
+                            <li>PowerBi</li>
+                            <li>Electronic Medical Records (EMR): eCW, RainTree, Epic, Halo</li>
+                            <li>HIPPA</li>
+                            <li>Data Management</li>
+                            <li>MS Visio</li>
+                            <li>Patient & Provider UI/UX</li>
+                            <li>Medical Coding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
-        </main>
+
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
