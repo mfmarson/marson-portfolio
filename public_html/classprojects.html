@@ -1,130 +1,345 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Marson Portfolio</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <style>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Marson Portfolio</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .nav-link {
+        font-size: 1.25rem;
+      }
+      .social-icons a {
+        font-size: 1.5rem;
+        margin-right: 15px;
+        color: white;
+      }
+      .social-icons a:hover {
+        color: #ddd;
+      }
+      .card-group .card {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+      .custom-gutter {
+        margin-left: -5px;
+        margin-right: -5px;
+      }
+      .custom-gutter > .col {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .popup iframe {
+        width: 100%;
+        height: 100%;
+      }
+      .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+      .popup-close::after {
+        content: "×";
+      }
+
+      ul{
+        text-decoration: none;
       
-         .nav-link {
-            font-size: 1.25rem; 
-        }
-        .social-icons a {
-            font-size: 1.5rem; 
-            margin-right: 15px; 
-            color: white;
-        }
-        .social-icons a:hover {
-            color: #ddd; 
-        }
-      
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
 
-    .col-lg-4 {
-        display: flex;
-        flex-direction: column;
-    }
+      }
 
-    .card {
-        flex: 1;
-    }
-
-    .logo{
-        height:200px;
-
-    }
-
-
-       
+      li{
+        text-decoration: none;
+        list-style-type: none;
+      }
     </style>
-    </head>
-</head>
-<body class="d-flex flex-column h-100">
+  </head>
+  <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-       
-        <!-- Navigation -->
-        
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="social-icons d-flex align-items-center">
-                                    <a href="https://www.linkedin.com/in/megan-marson5087/" target="_blank" class="fa fa-linkedin"></a>
-                                    <a href="https://github.com/mfmarson" target="_blank" class="fa fa-github"></a>
-                                </div>
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="experience.html">Skills</a></li>
-                    </ul>
-                    
-                </div>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="social-icons d-flex align-items-center">
+              <a
+                href="https://www.linkedin.com/in/megan-marson5087/"
+                target="_blank"
+                class="fa fa-linkedin"
+              ></a>
+              <a
+                href="https://github.com/mfmarson"
+                target="_blank"
+                class="fa fa-github"
+              ></a>
             </div>
-        </nav>
-<body>
-    <div class="row gx-5 justify-content-center ">
-            <div class="col-lg-4 mb-5">
-                <div class="card mb-5 mb-xl-3 shadow border-0 p-3 shadow-lg bg-white rounded-3">
-                    <div class="card-body">
-                        <div class=" medium text-uppercase fw-bold pb-xl-4 text-decoration-underline ">
-                            <a>Flik Finder</a>
-                                <p>Flik Finder Description Here</p>
-                                <p>Tech Stack: JavaScript| HTML | CSS | FastAPI </p>
-                        </div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="experience.html">Skills</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-                    <div class=" medium text-uppercase fw-bold pb-xl-4 text-decoration-underline ">
-                        <a>Magic 8 Ball</a>
-                            <p>Magic 8 Ball Description Here</p>
-                            <p>Tech Stack:  </p>
-                    </div>
-                    <div class=" medium text-uppercase fw-bold pb-xl-4 text-decoration-underline ">
-                            <a>The Time Traveling Mouse</a>
-                                <p>TTTM Description Here</p>
-                                <p>Tech Stack: </p>
-                    </div>
-            </div>      
-    </div>
-</body>
-<!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">Privacy</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Terms</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Contact</a>
-                    </div>
-                </div>
+      <section class="row g-0 justify-content-center py-5">
+        <div class="container px-5 my-5">
+          <div class="text-center">
+            <h1>Byte Size Projects</h1>
+            <p>Click on the project for sample video</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mt-0">
+        <div class="row row-cols-1 row-cols-md-2 g-1 justify-content-center">
+          <div class="col mb-4">
+            <div
+              class="card h-100 shadow border-0 p-3 shadow-lg bg-white rounded-3"
+              onclick="showPopup('video1')"
+            >
+              <img
+                src="/Users/meganmarson/Repos/marson-portfolio/public_html/assets/Screenshot 2024-08-02 at 1.42.20 PM.png"
+                class="card-img-top"
+                alt="card-grid-image"
+              />
+              <div class="card-body">
+                
+                <p class="card-text lead">
+                 Introducing The Time Traveling Mouse – an enchanting app for bookworms! Picture a whimsical mouse with a penchant for literature, helping you track every book you've read. Log titles, authors, and ratings into your personal library, effortlessly searching through your cherished collection. When it's time to embark on your next literary adventure, our delightful mouse whisks you away to Goodreads, ensuring you never miss a magical story. Dive into the world of The Time Traveling Mouse and let your imagination soar!
+                </p>
+                <p class="lead"> Tech Stack: Python | JavaScript | HTML | CSS | SQL</p>
+              </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+          </div>
+
+          <div class="col mb-4">
+            <div
+              class="card h-100 shadow border-0 p-3 shadow-lg bg-white rounded-3"
+              onclick="showPopup('video2')"
+            >
+              <img
+                src="/Users/meganmarson/Repos/marson-portfolio/public_html/assets/Screenshot 2024-08-02 at 3.18.51 PM.png"
+                class="card-img-top"
+                alt="card-grid-image"
+              />
+              <div class="card-body">
+              
+                <p class="card-text lead">
+                 Discover Flik Finder – your ultimate movie companion! Effortlessly search our extensive database for movies by title and instantly uncover everything you need. From captivating posters and intriguing plots to precise ratings, Flik Finder delivers it all. Whether you're in the mood for a classic film or the latest blockbuster, Flik Finder ensures you have all the information at your fingertips. 
+                </p>
+                <p class="lead"> Tech Stack: JavaScript | HTML | CSS | FastAPI</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-4">
+            <div
+              class="card h-100 shadow border-0 p-3 shadow-lg bg-white rounded-3"
+              onclick="showPopup('video3')"
+            >
+              <img
+                src="/Users/meganmarson/Repos/marson-portfolio/public_html/assets/Screenshot 2024-08-02 at 3.09.41 PM.png"
+                class="card-img-top"
+                alt="card-grid-image"
+              />
+              <div class="card-body">
+                
+                <p class="card-text lead">
+Introducing Mystic 8 Ball – your digital oracle! Seek answers to life's questions with just one click. Embrace the magic, and let Mystic 8 Ball guide your way with a sprinkle of fun and a dash of mystery!
+                </p>
+                <p class="lead"> Tech Stack: JavaScript | HTML | CSS  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-4">
+            <div
+              class="card h-100 shadow border-0 p-3 shadow-lg bg-white rounded-3"
+              onclick="showPopup('video4')"
+            >
+              <div class="card-body">
+                <h5 class="card-title lead">COMING SOON!</h5>
+                <p class="card-text lead">
+                  Come back soon for a new Byte Size project!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popups -->
+      <div id="video1" class="popup">
+        <span class="popup-close" onclick="hidePopup('video1')"></span>
+        <div class="position-relative" style="padding-bottom: 62.5%; height: 0">
+          <iframe
+            src="https://www.loom.com/embed/13194cf804f848a488b4a07209b46fae?sid=0b4058b3-efb4-4011-89db-6ef821590f83"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 80%;
+              height: 80%;
+            "
+          ></iframe>
+        </div>
+      </div>
+
+      <div id="video2" class="popup">
+        <span class="popup-close" onclick="hidePopup('video2')"></span>
+        <div class="position-relative" style="padding-bottom: 62.5%; height: 0">
+          <iframe
+            src="https://www.loom.com/embed/eaca2ce920cb4816b597ea7f7774b034?sid=250cbb0a-727a-47f6-b642-267f29a38c84&muted=true"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 80%;
+              height: 80%;
+            "
+          ></iframe>
+        </div>
+      </div>
+
+      <div id="video3" class="popup">
+        <span class="popup-close" onclick="hidePopup('video3')"></span>
+        <div class="position-relative" style="padding-bottom: 62.5%; height: 0">
+         <div style="position: relative; padding-bottom: 60.810810810810814%; height: 0;">
+        <iframe src="https://www.loom.com/embed/2062fd5c75de482eb0e7a26dc19443ff?sid=a5c51c8c-20d2-49f9-845f-e73e1a0540a3" 
+        frameborder="0" webkitallowfullscreen mozallowfullscreen 
+        allowfullscreen 
+        style="position: absolute; top: 0; left: 0; width: 80%; height: 80%;"></iframe>
+        </div>
+      </div>
+
+      <div id="video4" class="popup">
+        <span class="popup-close" onclick="hidePopup('video4')"></span>
+        <div class="position-relative" style="padding-bottom: 62.5%; height: 0">
+          <iframe
+            src=""
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer-->
+    <footer class="bg-dark py-4 mt-auto">
+      <div class="container px-5">
+        <div
+          class="row align-items-center justify-content-between flex-column flex-sm-row"
+        >
+          <div class="col-auto">
+            <div class="small m-0 text-white">
+              Copyright &copy; Your Website 2023
+            </div>
+          </div>
+          <div class="col-auto">
+            <a class="link-light small" href="#!">Privacy</a>
+            <span class="text-white mx-1">&middot;</span>
+            <a class="link-light small" href="#!">Terms</a>
+            <span class="text-white mx-1">&middot;</span>
+            <a class="link-light small" href="#!">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+      function showPopup(id) {
+        document.getElementById(id).style.display = "block";
+      }
+      function hidePopup(id) {
+        document.getElementById(id).style.display = "none";
+      }
+
+      document.querySelectorAll(".popup-close").forEach((closeBtn) => {
+        closeBtn.addEventListener("click", function (event) {
+          const popup = this.closest(".popup");
+          popup.style.display = "none";
+        });
+      });
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
