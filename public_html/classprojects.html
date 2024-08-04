@@ -83,14 +83,13 @@
 
       ul{
         text-decoration: none;
-      
-
       }
 
       li{
         text-decoration: none;
         list-style-type: none;
       }
+      
     </style>
   </head>
   <body class="d-flex flex-column h-100">
@@ -143,8 +142,8 @@
       <section class="row g-0 justify-content-center py-5">
         <div class="container px-5 my-5">
           <div class="text-center">
-            <h1>Byte Size Projects</h1>
-            <h3>Click on the project for sample video</h3>
+            <h1  class="fw-normal" >Byte Size Projects</h1>
+            <p class="lead">Click on the project for sample video</p>
           </div>
         </div>
       </section>
@@ -167,6 +166,7 @@
                  Introducing The Time Traveling Mouse – an enchanting app for bookworms! Picture a whimsical mouse with a penchant for literature, helping you track every book you've read. Log titles, authors, and ratings into your personal library, effortlessly searching through your cherished collection. When it's time to embark on your next literary adventure, our delightful mouse whisks you away to Goodreads, ensuring you never miss a magical story. Dive into the world of The Time Traveling Mouse and let your imagination soar!
                 </p>
                 <p class="lead"> Tech Stack: Python | JavaScript | HTML | CSS | SQL</p>
+                <a class="code" href="https://github.com/mfmarson/my_bookish_api" target="_blank">Project Code</a>
               </div>
             </div>
           </div>
@@ -187,6 +187,7 @@
                  Discover Flik Finder – your ultimate movie companion! Effortlessly search our extensive database for movies by title and instantly uncover everything you need. From captivating posters and intriguing plots to precise ratings, Flik Finder delivers it all. Whether you're in the mood for a classic film or the latest blockbuster, Flik Finder ensures you have all the information at your fingertips. 
                 </p>
                 <p class="lead"> Tech Stack: JavaScript | HTML | CSS | FastAPI</p>
+                <a class="code" href="https://github.com/mfmarson/onlinemoviedatabase_lookup" target="_blank">Project Code</a>
 
               </div>
             </div>
@@ -208,6 +209,7 @@
 Introducing Mystic 8 Ball – your digital oracle! Seek answers to life's questions with just one click. Embrace the magic, and let Mystic 8 Ball guide your way with a sprinkle of fun and a dash of mystery!
                 </p>
                 <p class="lead"> Tech Stack: JavaScript | HTML | CSS  </p>
+                <a class="code" href="https://github.com/mfmarson/Magic_8" target="_blank">Project Code</a>
               </div>
             </div>
           </div>
@@ -218,7 +220,7 @@ Introducing Mystic 8 Ball – your digital oracle! Seek answers to life's questi
               onclick="showPopup('video4')"
             >
               <div class="card-body">
-                <h5 class="card-title lead">COMING SOON!</h5>
+                <h5 class="card-title lead fw-bolder">COMING SOON!</h5>
                 <p class="card-text lead">
                   Come back soon for a new Byte Size project!
                 </p>
@@ -339,7 +341,13 @@ Introducing Mystic 8 Ball – your digital oracle! Seek answers to life's questi
           const popup = this.closest(".popup");
           popup.style.display = "none";
         });
-      });
+
+        document.querySelectorAll(".code").forEach((link) => {
+            link.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+          });
+        })
     </script>
   </body>
 </html>
