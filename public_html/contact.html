@@ -65,32 +65,32 @@
                         <form id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control shadow border-0" id="name" type="text" placeholder="Enter your name..." required />
+                                <input class="form-control shadow border-0" id="name" name="name" type="text" placeholder="Enter your name..." required />
                                 <label for="name">Name</label>
                                 <div class="invalid-feedback">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control shadow border-0" id="email" type="email" placeholder="name@example.com" required />
+                                <input class="form-control shadow border-0" id="email" name="email" type="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback">An email is required.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control shadow border-0" id="phone" type="tel" placeholder="(123) 456-7890" required />
+                                <input class="form-control shadow border-0" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control shadow border-0" id="message" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
+                                <textarea class="form-control shadow border-0" id="message" name="message" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback">A message is required.</div>
                             </div>
                             <!-- Submit success message-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">Thank you for your message!</div>
+                                    <div class="fw-bolder">Form submission successful!</div>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -135,8 +135,7 @@
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        // Service ID, Template ID, and Public Key from EmailJS
+        
         const serviceID = 'service_0t24bzi';
         const templateID = 'template_4j79glo';
 
@@ -150,8 +149,12 @@
                 document.getElementById('submitSuccessMessage').classList.add('d-none');
                 document.getElementById('submitErrorMessage').classList.remove('d-none');
             });
+
+            document.getElementById('name').value='';
+            document.getElementById('email').value='';
+            document.getElementById('phone').value ='';
+            document.getElementById('message').value = '';
     });
 </script>
-
 </body>
 </html>
